@@ -25,8 +25,42 @@ code {
 .notes-list
 {
 display: grid;
+display: block;
 grid-gap: 1rem;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+
+.note.new {
+  background-color: yellowgreen;
+  min-width: 550px;
+  position: absolute;
+  right: 50px;
+}
+
+
+textarea{
+  border: none;
+  resize: none;
+  background-color: yellowgreen;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.save
+{
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+}
+
+.save:hover
+{
+  background-color: lightgreen;
+  cursor: pointer;
 }
 
 .note
@@ -38,6 +72,9 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 250px;
+  position: relative;
+    top: 100px;
 }
 
 .note-footer
@@ -45,4 +82,33 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.delete-icon 
+{
+  cursor: pointer;
+}
+
+.search 
+{
+display: flex;
+align-items: center;
+background-color: lightgray;
+border-radius: 10px;
+padding: 5px;
+margin-bottom: 1.5em;
+margin-top: 30px;
+position: absolute;
+left: auto;
+}
+
+.search input
+{
+  border: none;
+  background-color: lightgray;
+}
+
+.search input:focus
+{
+outline:none;
 }
