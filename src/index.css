@@ -33,9 +33,9 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
 .note.new {
   background-color: yellowgreen;
-  min-width: 550px;
+  min-width: 40%;
   position: absolute;
-  right: 50px;
+  left: 40%;
 }
 
 
@@ -74,7 +74,7 @@ textarea:focus {
   justify-content: space-between;
   max-width: 250px;
   position: relative;
-    top: 100px;
+  top: 145px;
 }
 
 .note-footer
@@ -100,6 +100,7 @@ margin-bottom: 1.5em;
 margin-top: 30px;
 position: absolute;
 left: auto;
+width: 270px;
 }
 
 .search input
@@ -111,4 +112,91 @@ left: auto;
 .search input:focus
 {
 outline:none;
+}
+
+#all-notes
+{
+  margin-top: 105px;
+  margin-left: 290px;
+  float: left;
+  font-size: 18px;
+  position: absolute;
+}
+
+#new-note
+{
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 620px;
+  font-size: 18px;
+}
+
+/* Smartphones (portrait) */
+@media only screen and (max-width: 420px) {
+  .note.new {
+    background-color: yellowgreen;
+    min-width: 35%;
+    position: absolute;
+    left: 212px;
+}
+.note {
+  background-color: yellow;
+  margin-bottom: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 154px;
+  position: relative;
+  top: 145px;
+}
+#all-notes {
+  margin-top: 105px;
+  margin-left: 16px;
+  float: left;
+  font-size: 18px;
+  position: absolute;
+}
+#new-note {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 210px;
+  font-size: 18px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+  margin-top: 30px;
+  position: absolute;
+  left: auto;
+  width: 176px;
+}
+}
+
+/* iPads (portrait and landscape)  */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .note.new {
+    background-color: yellowgreen;
+    min-width: 40%;
+    position: absolute;
+    left: 400px;
+}
+#all-notes {
+  margin-top: 105px;
+  margin-left: 17px;
+  float: left;
+  font-size: 18px;
+  position: absolute;
+}
+#new-note {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 401px;
+  font-size: 18px;
+}
 }
